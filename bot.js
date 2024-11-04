@@ -213,7 +213,7 @@ function onRedeemHandler(channel, username, rewardType, tags, message) {
   console.log(tags)
   console.log(rewardType);
   switch(rewardType) {
-    // Mantra reward
+    // Mantra reward (below is a tutorial fake custom reward id)
     case '27c8e486-a386-40cc-9a4b-dbb5cf01e439': break;
   }
 }
@@ -344,7 +344,7 @@ function getTxtFiles(directoryPath) {
 
 //selects a list
 function listSelector(file) {
-    const fileList = getTxtFiles('C:/Users/spaces/SpacesDocs/spaces_bot')
+    const fileList = getTxtFiles('BOT LOCATION')
     var file = file + ".txt"
     if (fileList.includes(file)){
       console.log("File exists: " + file)
@@ -382,7 +382,7 @@ function printFormattedPracList(txtFile) {
 
 //looks at .txt in dir, filters them for praclists, and writes a list of praclists to praclists.txt
 function updateListOfLists() {
-  const fileList = getTxtFiles('C:/Users/spaces/SpacesDocs/spaces_bot')
+  const fileList = getTxtFiles('BOT LOCATION')
   fs.writeFileSync('praclists.txt', '', (err) => {
     if (err) {
       console.error('Error clearing file:', err);
